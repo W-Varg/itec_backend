@@ -14,5 +14,5 @@ function ordenar(){
         
 
     }
-    console.log("lista ordenada", listaOrdenada);    
+    // console.log("lista ordenada", listaOrdenada);    
 }

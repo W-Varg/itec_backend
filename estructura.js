@@ -27,27 +27,25 @@
 
 // Imprime el array ordenado en la consola.
 
-var listaNumero = [1,58,93, 153 ,18,31,8321,63,831,5348,3,7485]; // 8
+var listaNumero = [31,8321,63,831,5348,1,58,93, 153 ,18,3,7485]; // 8
 function ordenar(lista){ // argumentos, parametros
     // shift() -> elimina ,unshift()->iserta al principio
     // push() -> insertar al final, .pop() // remueve del final
 
-    // console.log("tamaño = ", lista.length); // 4   
-
-    const lista = [];
+    // const lista = [];
     for (let i = 0; i < lista.length -1; i++) {
         for (let j = 0; j < lista.length -1 - i; j++) {
             const primerElemento = lista[j]; // 1,
             const segundoElemento = lista[j +1]; //58
             
             if(primerElemento > segundoElemento){
-                listaOrdenada[j] =segundoElemento; // insertar al final, insertar princpio, eliminar de principio, eliminar ultimo
+                lista[j] =segundoElemento; // insertar al final, insertar princpio, eliminar de principio, eliminar ultimo
                 lista[j+1] = primerElemento;
             }
                 
         }
     }
-    console.log("lista desordenada =", listaOrdenada);    
+    console.log("lista desordenada =", lista);    
 
     // console.log(listaNumero.sort((elemeno1, elemento2) => elemento2 -elemeno1   ))
 }

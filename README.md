@@ -41,4 +41,8 @@ lista
 
 
 comando de git
-git push 
+git push  -> para subir cambios
+git pull -> para traer cambios
+
+git fetch -> para actulizar cambios
+git log
