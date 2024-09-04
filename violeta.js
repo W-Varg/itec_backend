@@ -7,14 +7,13 @@ function ordenar(){
         for (let j = 0; j < listanumerada.length-1; j++) {
             const elemento1 = listanumerada[j];
             const elemento2 = listanumerada[j+1];
-            if(elemento1>elemento2){
-                listaordenada = listanumerada[j];
-                listanumerada[j] = listanumerada[j+1];
-                listanumerada[j+1] = listaordenada;           
+            if(elemento1>elemento2){                
+                listaordenada[j] = elemento2;
+                listaordenada[j+1] = elemento1;           
             }
         }
         
     }
-    console.log("Lista ordenada =", listanumerada);    // safdsaf
+    console.log("Lista ordenada =", listaordenada);    // safdsaf
 }
 ordenar();
