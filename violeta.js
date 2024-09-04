@@ -1,3 +1,5 @@
+const jonatan = required("jonatan.js");
+
 function ordenar(){
     let listanumerada = [1,58,93,18,31,8321,63,831,5348,3,18]
     console.log(listanumerada.length);
