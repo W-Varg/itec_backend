@@ -40,9 +40,12 @@ lista
     // push() -> insertar al final, .pop() // remueve del final
 
 
-comando de git
+## comando de git
 git push  -> para subir cambios
+
 git pull -> para traer cambios
 
 git fetch -> para actulizar cambios
+
+
 git log
