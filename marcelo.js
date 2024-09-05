@@ -10,4 +10,13 @@ function ordenar(){
     }
 }
 
-// sdfasdfsf
+// ## comando de git
+// git pull -> para traer cambios
+//git push  -> para subir cambios
+//git fetch -> para actulizar cambios
+/*
+
+git log
+
+para ver ramas
+git branch  -->para cambiar de ramas*/
