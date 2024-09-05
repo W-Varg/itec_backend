@@ -75,3 +75,8 @@ cambiar de rama
 ```sh
 git checkout jonatan
 ```
+
+para traer cambios de otra rama (juntar)
+```sh
+git merge mi_rama_wilver
+```
