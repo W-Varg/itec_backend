@@ -62,5 +62,11 @@ git branch
 
 para cambiar de ramas
 ```sh
-git checkout nombre_rama
+git checkout -b jonatan
+```
+
+subir rama a remote
+
+```sh
+git push -u origin mi_rama_wilver
 ```
