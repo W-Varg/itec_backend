@@ -70,3 +70,8 @@ subir rama a remote
 ```sh
 git push -u origin mi_rama_wilver
 ```
+cambiar de rama 
+
+```sh
+git checkout jonatan
+```
