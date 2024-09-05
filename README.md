@@ -80,3 +80,12 @@ para traer cambios de otra rama (juntar)
 ```sh
 git merge mi_rama_wilver
 ```
+sincroniza local y remoto
+```sh
+git fetch origin
+```
+
+ver historial de cambios
+```sh
+git log
+```
