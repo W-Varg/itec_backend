@@ -39,6 +39,12 @@ lista
     // shift() -> elimina ,unshift()->iserta al principio
     // push() -> insertar al final, .pop() // remueve del final
 
+## configurar git despues de instalar
+git config --global user.name "Wilver vargas"
+
+git config --global user.email "kryshot05@gmail.com"
+
+
 
 ## comando de git
 git pull -> para traer cambios
