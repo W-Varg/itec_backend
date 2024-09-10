@@ -97,3 +97,30 @@ git log
 archivo .ts cuando se transpila .js
 
 bugs -> error
+
+<!-- instalar typescript -->
+npm install typescript ts-node @types/node --save-dev
+
+npm i typescript ts-node @types/node -D
+
+npm install nodemon
+
+# instalacion de forma global de paquetes npm
+
+npm install ts-node --global
+npm install ts-node -g
+
+
+## configuracion de typescript para ejecutar en consola
+
+npx tsc --init
+
+## ejecutar codigo .ts
+npx ts-node ejemplo.ts --watch
+
+## transformar .ts a .js
+npx tsc ejemplo.ts --outFile mi_archivo.js
+
+
+## nestjs -> backend
+
