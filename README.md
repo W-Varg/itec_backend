@@ -34,6 +34,9 @@
 - Date -> fechas "2024-08-29 20:26:17"
     new Date()
 
+- any|unknown|undefined|null
+    desconocidos
+
 
 lista
     // shift() -> elimina ,unshift()->iserta al principio
@@ -50,7 +53,6 @@ git config --global user.email "kryshot05@gmail.com"
 git pull -> para traer cambios
 
 git push  -> para subir cambios
-
 
 git fetch -> para actulizar cambios
 
@@ -89,3 +91,9 @@ ver historial de cambios
 ```sh
 git log
 ```
+
+# Typescript
+
+archivo .ts cuando se transpila .js
+
+bugs -> error
