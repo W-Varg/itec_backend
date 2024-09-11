@@ -1,3 +1,4 @@
+import { log } from "console";
 
 class OperamacionMatematica {
 
@@ -16,14 +17,34 @@ class OperamacionMatematica {
     }
 
     // violeta, sumar, restar, multiplicar
-       
+    suma(){        
+        console.log("La suma es:",this.valor1+this.valor2);
+    }   
+    resta(){
+        console.log("La resta es:",this.valor1-this.valor2);
+    } 
+    multiplica(){
+        console.log("El producto es:",this.valor1*this.valor2);
+    } 
 
+    
     // wilber , dividir a /b, retorne el resto
 
 
     // cesar, sacar el exponente, raiz cuadrada
-
+    exp_raiz(){
+        const elevado = Math.pow(this.valor1, this.valor2);
+        const raiz = Math.sqrt(this.valor1);
+        const raiz2 = Math.sqrt(this.valor2);
+        console.log(this.valor1 + "elevado a" + this.valor2 "=" elevado);
+        console.log("La raiz cuadrada de " + this.valor1 + "=" raiz);
+        console.log("La raiz cuadrada de " + this.valor2 + "=" raiz2);
+    }
 
     // marcelo, multiplicar
 
 }
+const resultado = new OperamacionMatematica(3, 4);
+resultado.suma();
+resultado.resta();
+resultado.multiplica();
