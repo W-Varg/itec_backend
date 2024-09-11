@@ -1,3 +1,4 @@
+import { log } from "console";
 
 class OperamacionMatematica {
 
@@ -10,8 +11,17 @@ class OperamacionMatematica {
     }
 
     // violeta, sumar, restar, multiplicar
-       
+    suma(){        
+        console.log("La suma es:",this.valor1+this.valor2);
+    }   
+    resta(){
+        console.log("La resta es:",this.valor1-this.valor2);
+    } 
+    multiplica(){
+        console.log("El producto es:",this.valor1*this.valor2);
+    } 
 
+    
     // wilber , dividir a /b, retorne el resto
 
 
@@ -28,3 +38,7 @@ class OperamacionMatematica {
     // marcelo, multiplicar
 
 }
+const resultado = new OperamacionMatematica(3, 4);
+resultado.suma();
+resultado.resta();
+resultado.multiplica();
