@@ -170,5 +170,16 @@ const per = new Persona();
 per es un objeto de tipo Persona
 per es una instancia de tipo Persona
 
+
+// // instanciar clase
+// const valor3:string = '5';
+// const operacion = new OperamacionMatematica(10, 5);
+
+// operacion.areaCirculo();
+// operacion.valor1;
+
+// // console.log("area = ", operacion.areaCirculo());
+
+
 ## nestjs -> backend
 

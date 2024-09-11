@@ -8,6 +8,12 @@ class OperamacionMatematica {
         this.valor1= num1;
         this.valor2 = num2;
     }
+    // wilver, area de un circulo
+    areaCirculo() {
+       const radio = this.valor1;
+        const area = Math.PI * Math.pow(radio, 2); // pi * r2 
+        console.log(area);
+    }
 
     // violeta, sumar, restar, multiplicar
        
