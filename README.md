@@ -132,12 +132,16 @@ npx tsc ejemplo.ts --outFile mi_archivo.js
 
     - public -> acceso publico
     - private -> acceso privado
-    - protected -> acceso protegido    
-    - static -> acceso estatico
+    - static -> acceso estatico, sin necesidad de instanciar
 
+    - protected -> acceso protegido    
     - readonly -> solo lectura
+
     - extends -> herencia
     - implements -> interface
+    - interface -> clase abstracta
+    - emun -> enumeracion
+    - types -> tipado
 
  - crear una clase
 ```ts

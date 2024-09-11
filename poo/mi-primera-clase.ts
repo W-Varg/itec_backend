@@ -2,7 +2,9 @@ import { log } from "console";
 
 class OperamacionMatematica {
 
-    valor1: number = 0;
+    // atributos
+    readonly esMayorDe: number = 18;
+    protected valor1: number = 0;
     valor2: number = 0;
 
     constructor( num1: number,  num2: number) {
@@ -10,20 +12,25 @@ class OperamacionMatematica {
         this.valor2 = num2;
     }
     // wilver, area de un circulo
-    areaCirculo() {
+    public areaCirculo() {
        const radio = this.valor1;
         const area = Math.PI * Math.pow(radio, 2); // pi * r2 
         console.log(area);
     }
 
+    static valorPi(){
+        return Math.PI
+    }
+
     // violeta, sumar, restar, multiplicar
-    suma(){        
+    private suma(){        
         console.log("La suma es:",this.valor1+this.valor2);
     }   
-    resta(){
+    public resta(){
+        this.suma();
         console.log("La resta es:",this.valor1-this.valor2);
     } 
-    multiplica(){
+    public multiplica(){
         console.log("El producto es:",this.valor1*this.valor2);
     } 
 
@@ -59,7 +66,11 @@ class OperamacionMatematica {
     // marcelo, multiplicar
 
 }
-const resultado = new OperamacionMatematica(3, 4);
-resultado.suma();
-resultado.resta();
-resultado.multiplica();
+// const resultado = new OperamacionMatematica(3, 4);
+// // resultado.suma();
+// resultado.areaCirculo();
+// // resultado.resta();
+// resultado.multiplica();
+
+const pi = OperamacionMatematica.valorPi();
+console.log(pi)
