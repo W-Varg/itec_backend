@@ -122,5 +122,53 @@ npx ts-node ejemplo.ts --watch
 npx tsc ejemplo.ts --outFile mi_archivo.js
 
 
+## POO,
+
+ - palabras reservadas
+    - class -> definar la clase
+    - this -> identificador
+    - contructor -> inicializar la clase con valores
+    - new -> instanciar la clases
+
+    - public -> acceso publico
+    - private -> acceso privado
+    - protected -> acceso protegido    
+    - static -> acceso estatico
+
+    - readonly -> solo lectura
+    - extends -> herencia
+    - implements -> interface
+
+ - crear una clase
+```ts
+class NombreClase {
+
+    // atributos, variables
+    variableA: number;
+    variableB: string;
+    
+    // constructor, inicializa los valores
+    constructor(var1: number, var2: string) {
+        this.variableA = 1;
+        this.variableB = 2;
+    }
+
+    // metodos, funciones, procesos, acciones
+    miComportamientos(){
+     console.log(this.variableA, this.variableB)
+
+    }
+}
+
+const miInstancia = new NombreClase(1, 'hola'); // inicaliza la clase
+
+//inicializar la clase
+
+```
+
+const per = new Persona();
+per es un objeto de tipo Persona
+per es una instancia de tipo Persona
+
 ## nestjs -> backend
 
