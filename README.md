@@ -137,11 +137,13 @@ npx tsc ejemplo.ts --outFile mi_archivo.js
     - protected -> acceso protegido    
     - readonly -> solo lectura
 
-    - extends -> herencia
-    - implements -> interface
-    - interface -> clase abstracta
-    - emun -> enumeracion
     - types -> tipado
+    - interface -> clase abstracta, esqueleto
+    - implements -> interface
+    - export -> exportar clases o funciones hacia otros archivos
+    - emun -> enumeracion
+
+    - extends -> herencia popo 
 
  - crear una clase
 ```ts
