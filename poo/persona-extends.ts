@@ -19,13 +19,10 @@ class DatosPersona implements IPersona {
     constructor(valo11: string) {       
         this.nombre = valo11;
     }
- 
 
     asignarEdad(dto:EdadDatoDeEntrada): void {
-        
        this.edad = dto.edad
        console.log(`se asigno la edad = ${this.edad}`);
-       
     }
 
     retornarMiNombre(){
