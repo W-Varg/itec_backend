@@ -22,6 +22,7 @@ function verificarDeOpcion(valorEntrada: string){ //1,23,3,4, dsafd
             break;
         case '3':
             console.log('eleccion opcion 3');
+            borrarEstudiante();
             break;
         case '4':
             console.log('eleccion opcion 4');
@@ -54,6 +55,16 @@ function insertarEstudiante(){
      })
 }
 
+function borrarEstudiante (){
+    rl.question("Ingresa el nombre del estudiante a borrar: ",  (nombreEstudiante) => {
+        estudiantes.push(nombreEstudiante)
+     
+    const borrar=this.estudiantes.find((array_nombre)=> nombreEstudiante.toUpperCase()===array_nombre.toUpperCase())
+    if(borrar){
+        this.estudiantes = this.estudiantes.filter((array_nombre)=> nombreEstudiante.toLowerCase() !== array_nombre.toLowerCase()) 
+    }
+    })
+}
 function actualizarEstudiante() {
     rl.question("Ingresa el nombre del estudiante a actualizar: ", (nombreEstudiante) => { 
         const nombreactualizado = estudiantes.indexOf(nombreEstudiante); 
@@ -93,7 +104,7 @@ function mostrarTodosLosEstudiantes() {
     // impirimir is existe o no
     // imprmir los estudiantes 
 
-// borrar -> d -> borrar
+// borrar -> d -> cesar
     // verificar si existe en el array, si existe borrar
     // mostrar el la nueva lista de estudiante sin el estudiante a borrar
 // motrarTotalEstudiantes -> jonatan
