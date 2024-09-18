@@ -37,7 +37,7 @@ const mostrarMenu= ()=>{
     console.log("2. Actualizar estudiante");
     console.log("3. Borrar estudiante");
     console.log("4. Mostrar estudiante");
-    console.log("5. Salir");
+    console.log("5. Mostrar todos los estudiantes");
 
 
 
@@ -54,6 +54,17 @@ function insertarEstudiante(){
 }
 
 mostrarMenu()
+function mostrarTodosLosEstudiantes() {
+    if (estudiantes.length === 0) {
+        console.log("No hay estudiantes registrados.");
+    } else {
+        console.log("Lista de todos los estudiantes:");
+        estudiantes.forEach((estudiante, index) => {
+            console.log(`${index + 1}. ${estudiante}`);
+        });
+    }
+    mostrarMenu();
+}
 
 
 // insertar -> c
