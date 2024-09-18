@@ -24,9 +24,12 @@ function verificarDeOpcion(valorEntrada: string){ //1,23,3,4, dsafd
             borrarEstudiante();
             break;
         case '4':
+            mostrarEstudiantes();
+            break;
+        case '5':
+            mostrarTodosLosEstudiantes();
             break;
         default:
-            console.log('opcion no valida');
             salirPrograma()            
             break;
     }
@@ -51,6 +54,18 @@ function insertarEstudiante(){
      })
 }
 
+function mostrarEstudiantes(){
+    rl.question("Ingresa el nombre del estudiante: ",  (nombreEstudiante) => {
+        const estudianteExiste = estudiantes.find((estudiantesexistentes)=> nombreEstudiante.toUpperCase()===estudiantesexistentes.toUpperCase());
+        if(estudianteExiste){
+            console.log(`El estudiante ${nombreEstudiante} si existe`)
+        }else{
+            console.log(`El estudiante ${nombreEstudiante} no existe`)
+        }
+        mostrarMenu()
+     })
+
+    }
 function borrarEstudiante (){
     rl.question("Ingresa el nombre del estudiante a borrar: ",  (nombreEstudiante) => {
         estudiantes.push(nombreEstudiante)
