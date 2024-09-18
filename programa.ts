@@ -57,9 +57,20 @@ mostrarMenu()
 
 
 // insertar -> c
-// actualizar -> u
-// mostrar -> r
-// borrar -> d
+// actualizar -> u -> wilber, -> existir, estudiante a acualizar, no existe estidan
+// mostrar -> r -> violeta, nombre ediante, 
+    // impirimir is existe o no
+    // imprmir los estudiantes 
+
+// borrar -> d -> borrar
+    // verificar si existe en el array, si existe borrar
+    // mostrar el la nueva lista de estudiante sin el estudiante a borrar
+// motrarTotalEstudiantes -> jonatan
+    // mostrar total de estudiantes
+    // === 0, no hay estudiante
+    //  === 1 solo hay 1 estudiante
+    // > 1, los estudiantes son 861
+    // mostrar los estudiantes
 
 // mostrarMenuDeOperaciones
     // 1. Crear estudiante
