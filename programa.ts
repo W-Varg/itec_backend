@@ -5,7 +5,7 @@ import * as readline from "readline";
 // r -> read
 // u -> update
 // d -> delete
-const estudiantes :string[] =[]
+let estudiantes :string[] =[]
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -67,13 +67,16 @@ function mostrarEstudiantes(){
 
     }
 function borrarEstudiante (){
+    console.log(estudiantes);
     rl.question("Ingresa el nombre del estudiante a borrar: ",  (nombreEstudiante) => {
         estudiantes.push(nombreEstudiante)
-     
-    const borrar=this.estudiantes.find((array_nombre)=> nombreEstudiante.toUpperCase()===array_nombre.toUpperCase())
-    if(borrar){
-        this.estudiantes = this.estudiantes.filter((array_nombre)=> nombreEstudiante.toLowerCase() !== array_nombre.toLowerCase()) 
-    }
+        
+        const borrar=estudiantes.find((array_nombre)=> nombreEstudiante.toUpperCase()===array_nombre.toUpperCase())
+        if(borrar){
+            estudiantes = estudiantes.filter((array_nombre)=> nombreEstudiante.toLowerCase() !== array_nombre.toLowerCase()) 
+            console.log(estudiantes);
+            
+        }
     })
 }
 function actualizarEstudiante() {
@@ -85,6 +88,7 @@ function actualizarEstudiante() {
             rl.question("Ingresa el nuevo nombre del estudiante: ", (nuevoNombre) => {
                 estudiantes[nombreactualizado] = nuevoNombre; 
                 console.log(`Estudiante actualizado a ${nuevoNombre}.`); 
+                mostrarMenu();
             });
         }
         mostrarMenu(); 
