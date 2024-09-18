@@ -143,7 +143,9 @@ npx tsc ejemplo.ts --outFile mi_archivo.js
     - export -> exportar clases o funciones hacia otros archivos
     - emun -> enumeracion
 
-    - extends -> herencia popo 
+    - extends -> herencia popo
+    - super -> super constructor
+    - void -> indica que la funcion no retorna ningun valor
 
  - crear una clase
 ```ts
