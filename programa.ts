@@ -15,13 +15,7 @@ function verificarDeOpcion(valorEntrada: string){ //1,23,3,4, dsafd
     switch (valorEntrada) {
         case '1':
             // async/ await -> 
-            rl.question("Ingresa el nombre del estudiante: ",  (nombreEstudiante) => {
-               insertarEstudiante(nombreEstudiante)
-               console.log(estudiantes, "\n" /*agrega salto de linea*/);
-               mostrarMenu()
-            })
-
-            
+            insertarEstudiante()
             break;
         case '2':
             console.log('eleccion opcion 2');
@@ -52,13 +46,15 @@ const mostrarMenu= ()=>{
     })
 }
 
-
+function insertarEstudiante(){
+    rl.question("Ingresa el nombre del estudiante: ",  (nombreEstudiante) => {
+        estudiantes.push(nombreEstudiante)
+        mostrarMenu()
+     })
+}
 
 mostrarMenu()
 
-function insertarEstudiante(nombreEstudiante: string){
-    estudiantes.push(nombreEstudiante)
-}
 
 // insertar -> c
 // actualizar -> u
