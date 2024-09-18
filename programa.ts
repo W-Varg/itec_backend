@@ -27,7 +27,8 @@ function verificarDeOpcion(valorEntrada: string){ //1,23,3,4, dsafd
             console.log('eleccion opcion 4');
             break;
         default:
-            console.log('opcion no valida');            
+            console.log('opcion no valida');
+            salirPrograma()            
             break;
     }
 }
@@ -81,3 +82,7 @@ mostrarMenu()
 // motrarTotalEstudiantes
 // mostrarEstudiantesVarones
 // mostrarEstudiantesMayores
+
+function salirPrograma(){
+    rl.close()
+}
