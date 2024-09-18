@@ -21,11 +21,9 @@ function verificarDeOpcion(valorEntrada: string){ //1,23,3,4, dsafd
             actualizarEstudiante()
             break;
         case '3':
-            console.log('eleccion opcion 3');
             borrarEstudiante();
             break;
         case '4':
-            console.log('eleccion opcion 4');
             break;
         default:
             console.log('opcion no valida');
@@ -40,8 +38,6 @@ const mostrarMenu= ()=>{
     console.log("3. Borrar estudiante");
     console.log("4. Mostrar estudiante");
     console.log("5. Mostrar todos los estudiantes");
-
-
 
     rl.question("Ingresa una opción: ", (opcion) => { // quedarse en espera hasta recibir un valor
         verificarDeOpcion(opcion)
@@ -80,11 +76,6 @@ function actualizarEstudiante() {
     });
 }
 
-
-
-
-
-mostrarMenu()
 function mostrarTodosLosEstudiantes() {
     if (estudiantes.length === 0) {
         console.log("No hay estudiantes registrados.");
@@ -127,3 +118,5 @@ function mostrarTodosLosEstudiantes() {
 function salirPrograma(){
     rl.close()
 }
+
+mostrarMenu()
