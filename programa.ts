@@ -1,3 +1,4 @@
+import { log } from "console";
 import * as readline from "readline";
 
 // CRUD
@@ -24,7 +25,7 @@ function verificarDeOpcion(valorEntrada: string){ //1,23,3,4, dsafd
             console.log('eleccion opcion 3');
             break;
         case '4':
-            console.log('eleccion opcion 4');
+            mostrarEstudiantes();
             break;
         default:
             console.log('opcion no valida');            
@@ -53,6 +54,17 @@ function insertarEstudiante(){
      })
 }
 
+function mostrarEstudiantes(){
+    rl.question("Ingresa el nombre del estudiante: ",  (nombreEstudiante) => {
+        const estudianteExiste = estudiantes.find((estudiantesexistentes)=> nombreEstudiante.toUpperCase()===estudiantesexistentes.toUpperCase());
+        if(estudianteExiste){
+            console.log(`El estudiante ${nombreEstudiante} si existe`)
+        }else{
+            console.log(`El estudiante ${nombreEstudiante} no existe`)
+        }
+        mostrarMenu()
+     })
+}
 mostrarMenu()
 
 
