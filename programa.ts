@@ -18,7 +18,7 @@ function verificarDeOpcion(valorEntrada: string){ //1,23,3,4, dsafd
             insertarEstudiante()
             break;
         case '2':
-            console.log('eleccion opcion 2');
+            actualizarEstudiante()
             break;
         case '3':
             console.log('eleccion opcion 3');
@@ -53,6 +53,25 @@ function insertarEstudiante(){
         mostrarMenu()
      })
 }
+
+function actualizarEstudiante() {
+    rl.question("Ingresa el nombre del estudiante a actualizar: ", (nombreEstudiante) => { 
+        const nombreactualizado = estudiantes.indexOf(nombreEstudiante); 
+        if (nombreactualizado === -1) { 
+            console.log(`Estudiante ${nombreEstudiante} no encontrado.`);
+        } else { 
+            rl.question("Ingresa el nuevo nombre del estudiante: ", (nuevoNombre) => {
+                estudiantes[nombreactualizado] = nuevoNombre; 
+                console.log(`Estudiante actualizado a ${nuevoNombre}.`); 
+            });
+        }
+        mostrarMenu(); 
+    });
+}
+
+
+
+
 
 mostrarMenu()
 function mostrarTodosLosEstudiantes() {
