@@ -37,7 +37,7 @@ const mostrarMenu= ()=>{
     console.log("2. Actualizar estudiante");
     console.log("3. Borrar estudiante");
     console.log("4. Mostrar estudiante");
-    console.log("5. Salir");
+    console.log("5. Mostrar todos los estudiantes");
 
 
 
@@ -73,12 +73,34 @@ function actualizarEstudiante() {
 
 
 mostrarMenu()
+function mostrarTodosLosEstudiantes() {
+    if (estudiantes.length === 0) {
+        console.log("No hay estudiantes registrados.");
+    } else {
+        console.log("Lista de todos los estudiantes:");
+        estudiantes.forEach((estudiante, index) => {
+            console.log(`${index + 1}. ${estudiante}`);
+        });
+    }
+    mostrarMenu();
+}
 
 
 // insertar -> c
-// actualizar -> u
-// mostrar -> r
-// borrar -> d
+// actualizar -> u -> wilber, -> existir, estudiante a acualizar, no existe estidan
+// mostrar -> r -> violeta, nombre ediante, 
+    // impirimir is existe o no
+    // imprmir los estudiantes 
+
+// borrar -> d -> borrar
+    // verificar si existe en el array, si existe borrar
+    // mostrar el la nueva lista de estudiante sin el estudiante a borrar
+// motrarTotalEstudiantes -> jonatan
+    // mostrar total de estudiantes
+    // === 0, no hay estudiante
+    //  === 1 solo hay 1 estudiante
+    // > 1, los estudiantes son 861
+    // mostrar los estudiantes
 
 // mostrarMenuDeOperaciones
     // 1. Crear estudiante
