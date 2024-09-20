@@ -5,7 +5,7 @@ import * as readline from "readline";
 // r -> read
 // u -> update
 // d -> delete
-const estudiantes :string[] =[]
+let estudiantes :string[] =[]
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -18,16 +18,19 @@ function verificarDeOpcion(valorEntrada: string){ //1,23,3,4, dsafd
             insertarEstudiante()
             break;
         case '2':
-            console.log('eleccion opcion 2');
+            actualizarEstudiante()
             break;
         case '3':
-            console.log('eleccion opcion 3');
+            borrarEstudiante();
             break;
         case '4':
-            console.log('eleccion opcion 4');
+            mostrarEstudiantes();
+            break;
+        case '5':
+            mostrarTodosLosEstudiantes();
             break;
         default:
-            console.log('opcion no valida');            
+            salirPrograma()            
             break;
     }
 }
@@ -37,9 +40,7 @@ const mostrarMenu= ()=>{
     console.log("2. Actualizar estudiante");
     console.log("3. Borrar estudiante");
     console.log("4. Mostrar estudiante");
-    console.log("5. Salir");
-
-
+    console.log("5. Mostrar todos los estudiantes");
 
     rl.question("Ingresa una opción: ", (opcion) => { // quedarse en espera hasta recibir un valor
         verificarDeOpcion(opcion)
@@ -53,7 +54,58 @@ function insertarEstudiante(){
      })
 }
 
-mostrarMenu()
+function mostrarEstudiantes(){
+    rl.question("Ingresa el nombre del estudiante: ",  (nombreEstudiante) => {
+        const estudianteExiste = estudiantes.find((estudiantesexistentes)=> nombreEstudiante.toUpperCase()===estudiantesexistentes.toUpperCase());
+        if(estudianteExiste){
+            console.log(`El estudiante ${nombreEstudiante} si existe`)
+        }else{
+            console.log(`El estudiante ${nombreEstudiante} no existe`)
+        }
+        mostrarMenu()
+     })
+
+    }
+function borrarEstudiante (){
+    console.log(estudiantes);
+    rl.question("Ingresa el nombre del estudiante a borrar: ",  (nombreEstudiante) => {
+        estudiantes.push(nombreEstudiante)
+        
+        const borrar=estudiantes.find((array_nombre)=> nombreEstudiante.toUpperCase()===array_nombre.toUpperCase())
+        if(borrar){
+            estudiantes = estudiantes.filter((array_nombre)=> nombreEstudiante.toLowerCase() !== array_nombre.toLowerCase()) 
+            console.log(estudiantes);
+            
+        }
+    })
+}
+function actualizarEstudiante() {
+    rl.question("Ingresa el nombre del estudiante a actualizar: ", (nombreEstudiante) => { 
+        const nombreactualizado = estudiantes.indexOf(nombreEstudiante); 
+        if (nombreactualizado === -1) { 
+            console.log(`Estudiante ${nombreEstudiante} no encontrado.`);
+        } else { 
+            rl.question("Ingresa el nuevo nombre del estudiante: ", (nuevoNombre) => {
+                estudiantes[nombreactualizado] = nuevoNombre; 
+                console.log(`Estudiante actualizado a ${nuevoNombre}.`); 
+                mostrarMenu();
+            });
+        }
+        mostrarMenu(); 
+    });
+}
+
+function mostrarTodosLosEstudiantes() {
+    if (estudiantes.length === 0) {
+        console.log("No hay estudiantes registrados.");
+    } else {
+        console.log("Lista de todos los estudiantes:");
+        estudiantes.forEach((estudiante, index) => {
+            console.log(`${index + 1}. ${estudiante}`);
+        });
+    }
+    mostrarMenu();
+}
 
 
 // insertar -> c
@@ -62,7 +114,7 @@ mostrarMenu()
     // impirimir is existe o no
     // imprmir los estudiantes 
 
-// borrar -> d -> borrar
+// borrar -> d -> cesar
     // verificar si existe en el array, si existe borrar
     // mostrar el la nueva lista de estudiante sin el estudiante a borrar
 // motrarTotalEstudiantes -> jonatan
@@ -81,3 +133,9 @@ mostrarMenu()
 // motrarTotalEstudiantes
 // mostrarEstudiantesVarones
 // mostrarEstudiantesMayores
+
+function salirPrograma(){
+    rl.close()
+}
+
+mostrarMenu()
