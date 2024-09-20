@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/W-Varg/itec_backend#readme",
   "dependencies": {
+    "@nestjs/swagger": "^7.4.2",
     "luxon": "^3.5.0",
     "nodemon": "^3.1.4"
   },
