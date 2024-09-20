@@ -1,0 +1,55 @@
+Ejercicio 19: Ordenar un array de números en orden ascendente
+Descripción: Escribe un programa que ordene un array de números en orden ascendente.
+Instrucciones:
+
+
+Declara un array numeros con varios números.
+    const numero = [1,58,93,18,31,8321,63,831,5348,3,18]
+Usa el método sort para ordenar el array.
+
+Imprime el array ordenado en la consola.
+
+cesar
+ITrasnporte {
+    tipoTrasnsport: string;
+
+    dimeTuTipo(): string;
+}
+
+-- crear clases, y subclases,
+private, public
+
+wilber
+
+IFigurasGeometricas {
+    area: number;
+    dimeTuArea(): number;
+}
+-- crear clase, y subclases,
+private, public
+
+violeta
+
+IProfession {
+    nombre: string;
+
+    dimeTuProfesion(): number;
+}
+
+-- crear clases, y subclases,
+private, public
+
+
+Jhonatan
+
+interface IAminal{
+    nombre: string;
+    tipo: string;
+
+    dimeTuTipo(): string;
+}
+
+-- clases, y subclases
+-- private y public
+
+
