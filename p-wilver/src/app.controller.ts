@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { AppService } from './app.service';
-import { ApiProperty } from '@nestjs/swagger';
+import { ApiProperty, ApiTags } from '@nestjs/swagger';
 
 class DatosDeEntrada {
   @ApiProperty() // habilita el campo para ver en el swagger
@@ -10,7 +10,8 @@ class DatosDeEntrada {
   edad: number;
 }
 
-@Controller()
+@ApiTags('module app')
+@Controller('crud-base')
 export class AppController {
   invitados = ['Jonatan'];
 
@@ -20,6 +21,11 @@ export class AppController {
   getHello() {
     const resultado = this.appService.getHello();
     return resultado;
+  }
+
+  @Get('/obtener-invitados')
+  getInvitados() {
+    return this.invitados;
   }
 
   @Post()
