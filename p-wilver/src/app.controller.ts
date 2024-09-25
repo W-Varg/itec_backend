@@ -22,6 +22,11 @@ export class AppController {
     return resultado;
   }
 
+  @Get('/obtener-invitados')
+  getInvitados() {
+    return this.invitados;
+  }
+
   @Post()
   recibeInvitados(@Body() datos: DatosDeEntrada) {
     this.invitados.push(datos.nombre);
